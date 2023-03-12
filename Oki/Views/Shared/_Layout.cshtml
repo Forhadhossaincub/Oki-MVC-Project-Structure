@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.bundle.js"></script>
+
+    @RenderSection("styles",false)
+
+
+
+
+</head>
+<body>
+        <nav class="navbar navbar-light bg-white navbar-expand-md fixed-top border-bottom ">
+
+          
+            <div class="container-fluid">
+
+               <span class="navbar-brand">Oki</span>
+
+                <div class="navbar-collapse collapse">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            @Html.ActionLink("Home", "Index", "Home", new { }, new {@class="nav-link"})
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+        <div class="container-fluid main">
+
+            @RenderBody()
+
+        </div>
+      
+    <footer class="container-fluid">
+        <hr />
+        <p>Footer</p>
+
+    </footer>
+
+
+    @RenderSection("styles", false)
+</body>
+</html> 

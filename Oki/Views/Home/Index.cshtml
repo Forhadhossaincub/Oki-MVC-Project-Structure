@@ -1,0 +1,35 @@
+﻿@model IEnumerable <Oki.Models.Customer>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div> @ViewBag.Count</div>
+<div>@ViewData["FirstCustomer"]</div>
+
+<table class="table table-bordered table-striped" >
+
+    <thead class="table-dark">
+        <tr>
+            <th>Customer ID</th>
+            <th>Customer Name</th>
+            <th>City</th>
+            <th>Country</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach(var c in Model)
+            {
+                <tr>
+                    <td>@c.CustomerID</td>
+                    <td>@c.CompanyName</td>
+                    <td>@c.City</td>
+                    <td>@c.Country</td>
+                </tr>
+            }
+    </tbody>
+</table>
+
+

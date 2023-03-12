@@ -1,0 +1,9 @@
+﻿body {
+    padding-top: 70px;
+    padding-bottom: 20px;
+}
+
+.main{
+
+    min-height:calc(100vh - 170px)
+}
